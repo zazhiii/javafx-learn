@@ -11,6 +11,9 @@
     <modules>
         <module>1-01-HelloApp</module>
         <module>1-02-Transformations</module>
+        <module>2-01-ChoiceBox</module>
+        <module>3-03-ListView</module>
+        <module>1-03-Property</module>
     </modules>
 
     <properties>
