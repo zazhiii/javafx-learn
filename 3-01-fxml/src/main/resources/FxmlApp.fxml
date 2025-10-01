@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="FxmlAppController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <!-- 要在Controller中访问元素的话, 需要给他设置id -->
+        <Label fx:id="lb" text="Hello, FXML!" layoutX="100.0" layoutY="100.0" >
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="bt" text="上移" layoutX="100" layoutY="100" onAction="#moveUp"></Button>
+    </children>
+</AnchorPane>
