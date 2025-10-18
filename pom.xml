@@ -15,6 +15,7 @@
         <module>2-03-ListView</module>
         <module>1-03-Property</module>
         <module>3-01-fxml</module>
+        <module>2-04-Canvas</module>
         <module>2-04-AnchorPane</module>
     </modules>
 
