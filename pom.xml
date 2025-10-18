@@ -17,6 +17,8 @@
         <module>3-01-fxml</module>
         <module>2-04-Canvas</module>
         <module>2-04-AnchorPane</module>
+        <module>3-02-Graphics-2D</module>
+        <module>3-03-Timeline</module>
     </modules>
 
     <properties>
