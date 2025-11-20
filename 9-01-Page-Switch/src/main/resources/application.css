@@ -1,0 +1,12 @@
+.button {
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+}
+
+.vbox .button {
+    -fx-background-color: #34495e;
+}
+
+.vbox .button:hover {
+    -fx-background-color: #3b5771;
+}
