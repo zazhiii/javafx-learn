@@ -3,6 +3,9 @@ package com.zazhi.tableview;
 import com.zazhi.tableview.pojo.Item;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -23,15 +26,18 @@ public class TableViewApp extends Application {
 
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
-
         VBox.setVgrow(tableView, Priority.ALWAYS);
 
+        // 定义 TableColumn, 第一个泛型参数为 TableView 对应的对象类型，第二个泛型参数为该列对应的数据类型
+        // 构造器中传入的字符串为该列的标题
         TableColumn<Item, String> colSKU = new TableColumn<>("SKU");
         TableColumn<Item, String> colDescr = new TableColumn<>("Item");
         TableColumn<Item, Float> colPrice = new TableColumn<>("Price");
         TableColumn<Item, Boolean> colTaxable = new TableColumn<>("Tax");
         TableColumn<Item, Color> colColor = new TableColumn<Item, Color>("Color");
 
+        // 每个 TableColumn 需要设置一个 CellValueFactory，用于提取每个单元格需要显示的数据
+        // PropertyValueFactory 可以从 JavaBean 对象中提取属性值，构造器中传入的字符串为对应的属性名称
         colSKU.setCellValueFactory(new PropertyValueFactory<>("sku"));
         colDescr.setCellValueFactory(new PropertyValueFactory<>("descr"));
         colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
@@ -64,6 +70,7 @@ public class TableViewApp extends Application {
                 colSKU, colDescr, colPrice, colTaxable, colColor
         );
 
+        // 添加数据
         tableView.getItems().addAll(
                 new Item("KBD-0455892", "Mechanical Keyboard", 100.0f, true, Color.RED),
                 new Item("145256", "Product Docs", 0.0f, false, Color.BLUE),
