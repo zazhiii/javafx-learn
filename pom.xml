@@ -21,6 +21,7 @@
         <module>3-03-Timeline</module>
         <module>9-01-Page-Switch</module>
         <module>2-04-TableView</module>
+        <module>VBox</module>
     </modules>
 
     <properties>
