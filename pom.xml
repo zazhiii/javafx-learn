@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>1-01-HelloApp</module>
+        <module>0-HelloApp</module>
         <module>1-02-Transformations</module>
         <module>2-01-ChoiceBox</module>
         <module>2-03-ListView</module>
@@ -22,6 +22,8 @@
         <module>9-01-Page-Switch</module>
         <module>2-04-TableView</module>
         <module>VBox</module>
+        <module>1-core</module>
+        <module>2-basic-controls</module>
     </modules>
 
     <properties>
